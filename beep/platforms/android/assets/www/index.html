@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport"
+          content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <title>Beeprofiles</title>
+    <link rel="stylesheet" href="css/bootstrap-flex.min.css">
+    <link rel="stylesheet" href="css/beep.css">
+</head>
+<body>
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/beeptemplates.js"></script>
+<script type="text/javascript" src="js/beep.js"></script>
+
+<nav class="navbar" id="navbar">
+    <div class="navbar-brand pull-xs-left">
+        <i class="material-icons">menu</i>
+    </div>
+    <div class="navbar-brand pull-xs-left">
+        <img src="img/logo.png" class="embed-responsive-item" alt="" id="logoNavbar">
+    </div>
+    <div class="nav navbar-nav">
+        <div class="nav-item">
+            <input type="search" placeholder="Busqueda" class="form-control">
+        </div>
+        <div class="hidden-xs-down pull-xs-right media media-body">
+            <div class="media-object"><h6>Joshua Moreno</h6>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star</i>
+                <i class="material-icons">star_half</i>
+            </div>
+            <div class="media-right"><img src="img/logo.png" alt="" id="imagenNavbar"></div>
+        </div>
+        <div class="pull-xs-right">
+            <i class="material-icons">group</i>
+            <i class="material-icons">layers</i>
+            <i class="material-icons">near_me</i>
+        </div>
+    </div>
+</nav>
+
+<div id="contenedor"></div>
+<script>
+    beep.cargarVista('templates/wall.html');
+    $.get('templates/test.html', function (data) {
+        $('#wall').html(data);
+    })
+</script>
+</body>
+</html>
